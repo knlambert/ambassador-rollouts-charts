@@ -26,6 +26,6 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    app: echo
+    app: {{ include "echo.fullname" . }}
 ...
 
