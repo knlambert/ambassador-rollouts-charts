@@ -2,4 +2,41 @@
 ambassador:
   rollouts:
     annotations: {}
+    image:
+      repository: hashicorp/http-echo
+
+    trafficMappings:
+      - echo
+    steps:
+      - setWeight: 10
+      - pause:
+          duration: 1440
+      - setWeight: 20
+      - pause:
+          duration: 1440
+      - setWeight: 30
+      - pause:
+          duration: 1440
+      - setWeight: 40
+      - pause:
+          duration: 1440
+      - setWeight: 50
+      - pause:
+          duration: 1440
+      - setWeight: 60
+      - pause:
+          duration: 1440
+      - setWeight: 70
+      - pause:
+          duration: 1440
+      - setWeight: 80
+      - pause:
+          duration: 1440
+      - setWeight: 90
+      - pause:
+          duration: 1440
+      - setWeight: 100
+      - pause:
+          duration: 1440
+
 ...
