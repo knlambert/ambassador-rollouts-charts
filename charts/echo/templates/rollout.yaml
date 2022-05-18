@@ -33,7 +33,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        app: echo
+        app: {{ include "echo.fullname" . }}
     spec:
       containers:
       - args:
