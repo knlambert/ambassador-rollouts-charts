@@ -1,0 +1,12 @@
+---
+apiVersion: getambassador.io/v2
+kind:  Mapping
+metadata:
+  name:  {{ include "echo.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  prefix: /{{ include "echo.fullname" . }}
+  rewrite: /{{ include "echo.fullname" . }}
+  service: {{ include "echo.fullname" . }}:80
+  resolver: endpoint
+...
