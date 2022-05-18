@@ -23,6 +23,7 @@ spec:
         ambassador:
           mappings:
             - {{ include "echo.fullname" . }}
+      {{- with .Values.ambassador.rollouts.steps }}
       steps:
       {{- toYaml . | nindent 8}}
       {{- end}}
