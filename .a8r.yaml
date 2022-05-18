@@ -1,0 +1,5 @@
+k8s_config:
+- manifest_path: /charts
+  cluster_info:
+    cluster_id: 62a601b6-3931-5e1a-917e-7893a8e936e0
+    cluster_name: Kévin LAMBERT's cluster
