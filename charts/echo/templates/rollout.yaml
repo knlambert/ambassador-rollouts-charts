@@ -9,7 +9,7 @@ metadata:
   name: {{ include "echo.fullname" . }}
   namespace: {{ .Release.Namespace }}
 spec:
-  replicas: 2
+  replicas: {{ .Values.ambassador.rollouts.replicas }}
   selector:
     matchLabels:
       app: {{ include "echo.fullname" . }}
