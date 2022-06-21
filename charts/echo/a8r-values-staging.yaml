@@ -1,39 +1,39 @@
 ambassador:
   rollouts:
     annotations:
-      getambassador.io/rolloutId: 8ac86cb4-ed26-4861-b09e-1c1a22c2dd39
+      getambassador.io/rolloutId: 62eb6fc4-4667-4b1b-8897-1c3b5de5a07a
     image:
       repository: docker.io/hashicorp/http-echo
-      tag: 0.2.1
+      tag: 0.2.3
     replicas: 2
     steps:
     - setWeight: 10
     - pause:
-        duration: 60
+        duration: 12
     - setWeight: 20
     - pause:
-        duration: 60
+        duration: 12
     - setWeight: 30
     - pause:
-        duration: 60
+        duration: 12
     - setWeight: 40
     - pause:
-        duration: 60
+        duration: 12
     - setWeight: 50
     - pause:
-        duration: 60
+        duration: 12
     - setWeight: 60
     - pause:
-        duration: 60
+        duration: 12
     - setWeight: 70
     - pause:
-        duration: 60
+        duration: 12
     - setWeight: 80
     - pause:
-        duration: 60
+        duration: 12
     - setWeight: 90
     - pause:
-        duration: 60
+        duration: 12
     - setWeight: 100
     - pause:
-        duration: 60
+        duration: 12
