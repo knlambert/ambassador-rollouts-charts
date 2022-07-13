@@ -1,10 +1,10 @@
 ambassador:
   rollouts:
     annotations:
-      getambassador.io/rolloutId: 75d860a8-5d58-418f-bc10-417348a29a1e
+      getambassador.io/rolloutId: 669c052a-2aa1-4cc0-a6dc-5140dc15e358
     image:
       repository: docker.io/hashicorp/http-echo
-      tag: 0.2.1
+      tag: 0.2.3
     replicas: 2
     steps:
     - setWeight: 10
