@@ -1,0 +1,39 @@
+ambassador:
+  rollouts:
+    annotations:
+      getambassador.io/rolloutId: 1422c8ae-c42e-4cdc-bdd4-7b8c8757791f
+    image:
+      repository: docker.io/hashicorp/http-echo
+      tag: alpine
+    replicas: 2
+    steps:
+    - setWeight: 10
+    - pause:
+        duration: 60
+    - setWeight: 20
+    - pause:
+        duration: 60
+    - setWeight: 30
+    - pause:
+        duration: 60
+    - setWeight: 40
+    - pause:
+        duration: 60
+    - setWeight: 50
+    - pause:
+        duration: 60
+    - setWeight: 60
+    - pause:
+        duration: 60
+    - setWeight: 70
+    - pause:
+        duration: 60
+    - setWeight: 80
+    - pause:
+        duration: 60
+    - setWeight: 90
+    - pause:
+        duration: 60
+    - setWeight: 100
+    - pause:
+        duration: 60
